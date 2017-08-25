@@ -1,0 +1,57 @@
+﻿@model MuratDogan.Model.Tecrube
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tecrube</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pozisyon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pozisyon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslamaTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslamaTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CikisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CikisTarihi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

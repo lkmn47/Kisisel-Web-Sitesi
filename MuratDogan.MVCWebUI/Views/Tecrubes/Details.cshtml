@@ -1,0 +1,51 @@
+﻿@model MuratDogan.Model.Tecrube
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tecrube</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pozisyon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pozisyon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslamaTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslamaTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CikisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CikisTarihi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

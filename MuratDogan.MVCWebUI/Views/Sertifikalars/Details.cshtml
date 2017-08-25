@@ -1,0 +1,43 @@
+﻿@model MuratDogan.Model.Sertifikalar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sertifikalar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SertifikaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SertifikaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KurumAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KurumAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VerilisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VerilisTarihi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

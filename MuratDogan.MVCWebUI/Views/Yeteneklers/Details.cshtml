@@ -1,0 +1,35 @@
+﻿@model MuratDogan.Model.Yetenekler
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Yetenekler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YetenekAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YetenekAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seviyesi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seviyesi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
